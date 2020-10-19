@@ -2,14 +2,15 @@ import os
 from flask import Flask, jsonify, request
 from math import sqrt
 
-
-
+app = Flask(__name__)
+@app.route('/')
 def fibonacci():
     prox = 1
     ant = 0
     x = 0
     resp = "0,"
     while x <= 50:
+
         y = prox
         prox = prox + ant
         ant = y
